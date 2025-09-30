@@ -9,7 +9,7 @@ A modern, responsive web application that integrates Google's Gemini AI for inte
 
 ## Live Demo
 
-**[Try the Live Demo](https://your-app-name.onrender.com)** *(Update this URL after deployment)*
+**[Try the Live Demo](https://q-a-chatbot-with-gemini.onrender.com)**
 
 ## Features
 
