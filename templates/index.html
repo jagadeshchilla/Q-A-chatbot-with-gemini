@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gemini Chat</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+    <div class="app-container">
+        <!-- Expand button in top right -->
+        <button class="expand-button">
+            <i class="fas fa-expand-arrows-alt"></i>
+        </button>
+        
+        <!-- Chat messages area -->
+        <div class="chat-messages" id="chatMessages">
+            <div class="message bot-message">
+                <div class="message-content">
+                    <div class="message-text">
+                        Hello! I'm Gemini, your AI assistant. How can I help you today?
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Centered input field -->
+        <div class="input-container">
+            <div class="input-box">
+                <input type="file" id="imageInput" accept="image/*" style="display: none;">
+                
+                <!-- Image preview inside input -->
+                <div class="input-image-preview" id="inputImagePreview" style="display: none;">
+                    <img id="inputPreviewImage" src="" alt="Preview">
+                    <button type="button" id="removeInputImage" class="remove-input-image">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                
+                <button type="button" id="sendButton" class="send-button">
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+                <textarea id="messageInput" placeholder="Type your message here..." rows="1"></textarea>
+                <button type="button" id="imageButton" class="icon-button">
+                    <i class="fas fa-paperclip"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
